@@ -26,6 +26,7 @@ class ViewController: UIViewController {
   // MARK: - Override Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     labels = [presetLabel, curveLabel, forceLabel, durationLabel, delayLabel]
   }
   
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
     sender.animate()
 
     
-    animationIndex = animationIndex >= animations.count - 1 ? 0 : animationIndex + 1
+    animationIndex = animationIndex == animations.count - 1 ? 0 : animationIndex + 1
     
     customizeButton()
   }

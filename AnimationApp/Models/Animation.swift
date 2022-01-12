@@ -15,9 +15,6 @@ struct Animation {
   let delay: Double
 }
 
-
-extension Animation {
-}
 extension Animation {
   static func getAnimation() -> [Animation] {
     var animations: [Animation] = []
