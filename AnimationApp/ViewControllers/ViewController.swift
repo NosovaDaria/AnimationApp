@@ -20,26 +20,28 @@ class ViewController: UIViewController {
   
   // MARK: - Private Properties
   let animations = Animation.getAnimation()
-  
+  var labels: [SpringLabel] = []
   private var animationIndex = 0
+  
+  // MARK: - Override Methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    labels = [presetLabel, curveLabel, forceLabel, durationLabel, delayLabel]
+  }
   
   // MARK: - IB Actions
   @IBAction func runSpringAnimation(_ sender: SpringButton) {
     
     customizeViewAnimation(animationIndex)
     
-    setLabelsAnimation(presetLabel)
-    setLabelsAnimation(curveLabel)
-    setLabelsAnimation(forceLabel)
-    setLabelsAnimation(durationLabel)
-    setLabelsAnimation(delayLabel)
+    setLabelsAnimation(labels)
     
     sender.animation = "pop"
     sender.force = 0.1
     sender.animate()
 
     
-    animationIndex = animationIndex >= animations.count ? 0 : animationIndex + 1
+    animationIndex = animationIndex >= animations.count - 1 ? 0 : animationIndex + 1
     
     customizeButton()
   }
@@ -47,8 +49,8 @@ class ViewController: UIViewController {
 
 // MARK: - Private Methods
 extension ViewController {
+  
   private func customizeViewAnimation(_ index: Int) {
-    
     presetLabel.text = "preset: " + animations[animationIndex].preset
     curveLabel.text = "curve: " + animations[animationIndex].curve
     forceLabel.text = "force: \(animations[animationIndex].force)"
@@ -73,9 +75,11 @@ extension ViewController {
     }
   }
   
-  private func setLabelsAnimation(_ label: SpringLabel) {
-    label.animation = "pop"
-    label.delay = animations[animationIndex].delay + 1
-    label.animate()
+  private func setLabelsAnimation(_ labels: [SpringLabel]) {
+    labels.forEach { label in
+      label.animation = "pop"
+      label.delay = animations[animationIndex].delay + 1
+      label.animate()
+    }
   }
 }
