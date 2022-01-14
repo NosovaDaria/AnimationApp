@@ -15,6 +15,7 @@
 		4B964098278DAD18008AE409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B964096278DAD18008AE409 /* LaunchScreen.storyboard */; };
 		4B9640A6278F2F05008AE409 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9640A5278F2F05008AE409 /* Animation.swift */; };
 		4B9640A8278F7787008AE409 /* Pods_AnimationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A446088F1E16D86C5DFB2D /* Pods_AnimationApp.framework */; };
+		4B9640AD27918930008AE409 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9640AC27918930008AE409 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4B964097278DAD18008AE409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B964099278DAD18008AE409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B9640A5278F2F05008AE409 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		4B9640AC27918930008AE409 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D6A446088F1E16D86C5DFB2D /* Pods_AnimationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56FD4E58E0619C32DD1691E /* Pods-AnimationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationApp.release.xcconfig"; path = "Target Support Files/Pods-AnimationApp/Pods-AnimationApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				4B9640A2278F2E5E008AE409 /* ViewControllers */,
 				4B9640A3278F2E80008AE409 /* Storyboards */,
 				4B9640A7278F2F20008AE409 /* Models */,
+				4B9640AB279188E4008AE409 /* Services */,
 				4B9640A4278F2E99008AE409 /* Resources */,
 			);
 			path = AnimationApp;
@@ -115,6 +118,14 @@
 				4B9640A5278F2F05008AE409 /* Animation.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4B9640AB279188E4008AE409 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4B9640AC27918930008AE409 /* DataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D081A5E555D9DEDCF445E55A /* Frameworks */ = {
@@ -250,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B964090278DAD17008AE409 /* ViewController.swift in Sources */,
+				4B9640AD27918930008AE409 /* DataManager.swift in Sources */,
 				4B96408C278DAD17008AE409 /* AppDelegate.swift in Sources */,
 				4B9640A6278F2F05008AE409 /* Animation.swift in Sources */,
 				4B96408E278DAD17008AE409 /* SceneDelegate.swift in Sources */,
